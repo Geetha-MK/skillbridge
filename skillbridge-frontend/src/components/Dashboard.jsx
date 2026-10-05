@@ -21,6 +21,10 @@ function Dashboard() {
   return (
     <div className="dashboard-page">
 
+      {/* ==============================
+          WELCOME
+      ============================== */}
+
       <section className="dashboard-welcome">
 
         <div>
@@ -43,6 +47,10 @@ function Dashboard() {
       </section>
 
 
+      {/* ==============================
+          DASHBOARD ACTIONS
+      ============================== */}
+
       <section className="dashboard-section">
 
         <h2>
@@ -50,6 +58,8 @@ function Dashboard() {
         </h2>
 
         <div className="dashboard-actions">
+
+          {/* LEARN */}
 
           <div className="dashboard-card">
 
@@ -67,12 +77,16 @@ function Dashboard() {
               knowledge sharing.
             </p>
 
-            <button onClick={() => navigate('/skills')}>
-  Explore Skills
-</button>
+            <button
+              onClick={() => navigate('/skills')}
+            >
+              Explore Skills
+            </button>
 
           </div>
 
+
+          {/* TEACH */}
 
           <div className="dashboard-card">
 
@@ -89,12 +103,16 @@ function Dashboard() {
               by becoming a teacher.
             </p>
 
-            <button onClick={() => navigate('/teachers')}>
-  Start Teaching
-</button>
+            <button
+              onClick={() => navigate('/teachers')}
+            >
+              Start Teaching
+            </button>
 
           </div>
 
+
+          {/* CONNECT */}
 
           <div className="dashboard-card">
 
@@ -111,9 +129,37 @@ function Dashboard() {
               and teachers who share your interests.
             </p>
 
-            <button onClick={() => navigate('/connections')}>
-  Find People
-</button>
+            <button
+              onClick={() => navigate('/connections')}
+            >
+              Find People
+            </button>
+
+          </div>
+
+
+          {/* MY PROFILE */}
+
+          <div className="dashboard-card">
+
+            <div className="dashboard-card-icon">
+              👤
+            </div>
+
+            <h3>
+              My Profile
+            </h3>
+
+            <p>
+              Manage your profile, skills, learning
+              interests and career development resources.
+            </p>
+
+            <button
+              onClick={() => navigate('/profile')}
+            >
+              View Profile
+            </button>
 
           </div>
 
@@ -121,6 +167,10 @@ function Dashboard() {
 
       </section>
 
+
+      {/* ==============================
+          ACTIVITY
+      ============================== */}
 
       <section className="dashboard-section activity-section">
 
@@ -131,30 +181,41 @@ function Dashboard() {
         <div className="activity-container">
 
           <div className="activity-card">
+
             <span>
               Learning Requests
             </span>
+
             <strong>
               3
             </strong>
+
           </div>
 
+
           <div className="activity-card">
+
             <span>
               Teaching Requests
             </span>
+
             <strong>
               5
             </strong>
+
           </div>
 
+
           <div className="activity-card">
+
             <span>
               Connections
             </span>
+
             <strong>
               4
             </strong>
+
           </div>
 
         </div>

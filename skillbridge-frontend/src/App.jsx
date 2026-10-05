@@ -17,6 +17,11 @@ import Reviews from './components/Reviews'
 import Profile from './components/Profile'
 
 import ProtectedRoute from './components/ProtectedRoute'
+import FeaturedProviders from './components/FeaturedProviders'
+import SkillBridgeInsights from './components/SkillBridgeInsights'
+import SelfImprovement from './components/SelfImprovement'
+
+import FutureFeatures from './components/FutureFeatures'
 
 import './App.css'
 
@@ -30,6 +35,8 @@ function LandingPage() {
       <main>
         <Hero />
         <FeatureSection />
+        <FeaturedProviders />
+        <SkillBridgeInsights />
       </main>
 
       <Footer />
@@ -63,6 +70,10 @@ function App() {
           path="/register"
           element={<Register />}
         />
+        <Route
+  path="/future-features"
+  element={<FutureFeatures />}
+/>
 
 
         {/* =========================

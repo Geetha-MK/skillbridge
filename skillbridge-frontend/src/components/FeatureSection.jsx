@@ -1,41 +1,97 @@
-import FeatureCard from './FeatureCard'
+import { useNavigate } from 'react-router-dom'
 
 function FeatureSection() {
 
-  const features = [
+  const navigate = useNavigate()
+
+  const skills = [
     {
-      title: 'Learn',
-      description:
-        'Discover people who can help you learn new skills through personalized peer-to-peer learning.'
+      icon: '☕',
+      name: 'Java',
+      description: 'Learn Core Java, OOP, Collections and more.'
     },
     {
-      title: 'Teach',
-      description:
-        'Share your knowledge and help others grow by becoming a teacher in the skills you know.'
+      icon: '🐍',
+      name: 'Python',
+      description: 'Build your programming and problem-solving skills.'
     },
     {
-      title: 'Connect',
-      description:
-        'Build meaningful connections with learners and teachers who share your interests.'
+      icon: '⚛️',
+      name: 'React',
+      description: 'Create modern and interactive web applications.'
+    },
+    {
+      icon: '🗄️',
+      name: 'SQL',
+      description: 'Master databases, queries and data management.'
+    },
+    {
+      icon: '🌱',
+      name: 'Spring Boot',
+      description: 'Build powerful Java backend applications.'
+    },
+    {
+      icon: '💻',
+      name: 'Data Structures',
+      description: 'Improve your DSA and coding skills.'
     }
   ]
 
   return (
-    <section className="features-section">
+    <section className="popular-skills-section">
 
-      <h2>What can you do with SkillBridge?</h2>
+      <div className="popular-skills-heading">
 
-      <div className="feature-container">
+        <span className="section-badge">
+          🚀 LEARN SOMETHING NEW
+        </span>
 
-        {features.map((feature) => (
-          <FeatureCard
-            key={feature.title}
-            title={feature.title}
-            description={feature.description}
-          />
+        <h2>
+          Explore Popular <span>Skills</span>
+        </h2>
+
+        <p>
+          Discover skills you want to learn and connect with
+          students who can help you grow.
+        </p>
+
+      </div>
+
+      <div className="skills-grid">
+
+        {skills.map((skill) => (
+
+          <div
+            className="popular-skill-card"
+            key={skill.name}
+            onClick={() => navigate('/skills')}
+          >
+
+            <div className="popular-skill-icon">
+              {skill.icon}
+            </div>
+
+            <h3>{skill.name}</h3>
+
+            <p>{skill.description}</p>
+
+            <span className="popular-skill-link">
+              Explore skill →
+            </span>
+
+          </div>
+
         ))}
 
       </div>
+
+      <button
+        className="explore-all-btn"
+        onClick={() => navigate('/skills')}
+      >
+        Explore All Skills
+        <span>→</span>
+      </button>
 
     </section>
   )

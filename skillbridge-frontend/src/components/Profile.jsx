@@ -1,3 +1,5 @@
+import SelfImprovement from './SelfImprovement'
+
 function Profile() {
 
   const user = {
@@ -206,6 +208,10 @@ function Profile() {
         </div>
 
       </section>
+
+      {/* Self Improvement Hub */}
+
+      <SelfImprovement />
 
     </div>
   )
